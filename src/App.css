@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.marker {
+  transform: translate(-50%, -100%);
+  stroke: #f21d48;
+}
+.popup {
+  width: 30vw;
+  padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.entry-form label,
+.entry-form input,
+.entry-form textarea,
+.entry-form button {
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.entry-form input {
+  height: 30px;
+  padding: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.entry-form textarea {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
 }
 
-.App-link {
-  color: #61dafb;
+.entry-form button {
+  border-radius: 4px;
+  background-color: rgb(69, 223, 171);
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errormsg {
+  color: rgb(243, 79, 14);
+}
+
+.placeImg {
+  width: 100%;
+}
+
+/* rance input style */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 8px 0;
+  width: 100%;
+  border: none !important;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: rgb(69, 223, 171);
+  border-radius: 4px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-webkit-slider-thumb {
+  border: 1px solid #302c2c;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border-radius: 3px;
+  background: rgb(69, 223, 171);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: rgb(69, 223, 171);
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: rgb(69, 223, 171);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: rgb(69, 223, 171);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type="range"]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: rgb(69, 223, 171);
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: rgb(69, 223, 171);
 }
