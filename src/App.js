@@ -148,6 +148,16 @@ const App = () => {
           </Popup>{" "}
         </>
       ) : null}
+
+      <div className="credit">
+        <p>
+          Made with{" "}
+          <span role="img" aria-label="love emoji">
+            💗
+          </span>{" "}
+          by Shafi
+        </p>
+      </div>
     </ReactMapGL>
   );
 };

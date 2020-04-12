@@ -1,6 +1,7 @@
 .marker {
   transform: translate(-50%, -100%);
   stroke: #f21d48;
+  cursor: pointer;
 }
 .popup {
   width: 30vw;
@@ -44,6 +45,23 @@
 
 .placeImg {
   width: 100%;
+}
+
+.credit {
+  position: fixed;
+  top: 50 px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 55px;
+  border-radius: 5px;
+  border: 3px solid #1cbea0;
+  background: #1cbea0;
+  z-index: 9999;
+}
+
+.credit p {
+  margin: 5px;
 }
 
 /* rance input style */

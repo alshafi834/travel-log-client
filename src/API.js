@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const API_URL = "http://localhost:1337";
 
 export async function listLogEntries() {
@@ -14,4 +16,20 @@ export async function createTravelEntry(entry) {
     body: JSON.stringify(entry),
   });
   return response.json();
+}
+
+export async function uploadImage(file) {
+  const formData = new FormData();
+  formData.append("image", file);
+  const response = await axios.post(
+    `${API_URL}/api/logs/image-upload`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }
+  );
+  console.log(response);
+  return response.data;
 }
