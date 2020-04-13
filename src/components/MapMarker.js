@@ -15,8 +15,8 @@ const MapMarker = (props) => {
             <svg
               className="marker"
               style={{
-                height: `${6 * props.viewport.zoom}`,
-                width: `${6 * props.viewport.zoom}`,
+                height: `${3 * props.viewport.zoom}`,
+                width: `${3 * props.viewport.zoom}`,
               }}
               viewBox="0 0 24 24"
               stroke-width="2"

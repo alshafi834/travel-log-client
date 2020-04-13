@@ -15,7 +15,7 @@ const Instruction = () => {
         <div className="infos">
           <ul>
             <li>Double click on map to add a travel log</li>
-            <li>Click on the pins to watch infos</li>
+            <li>Click on the map pins to watch log infos.</li>
           </ul>
         </div>
       ) : null}

@@ -37,6 +37,7 @@
   border: none;
   padding: 12px 0;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .errormsg {
@@ -72,6 +73,10 @@
   color: #1cbea0;
   background: #fff;
   z-index: 9999;
+  display: flex;
+}
+.instruction i {
+  margin-top: 20px;
 }
 
 /* rance input style */

@@ -5,6 +5,7 @@ import { createTravelEntry, uploadImage } from "../API";
 const LogEntryForm = (props) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [rangeValue, setRangeValue] = useState(0);
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
@@ -44,7 +45,7 @@ const LogEntryForm = (props) => {
         name="description"
         id=""
         cols="2"
-        rows="3"
+        rows="1"
         ref={register}
       ></textarea>
       <label htmlFor="comments">Comment: </label>
@@ -52,7 +53,7 @@ const LogEntryForm = (props) => {
         name="comments"
         id=""
         cols="2"
-        rows="3"
+        rows="1"
         ref={register}
       ></textarea>
       <label htmlFor="visitDate">Visit Date: </label>
@@ -65,8 +66,18 @@ const LogEntryForm = (props) => {
         ref={register}
         placeholder="Pase an image URL"
       /> */}
-      <label htmlFor="rating">Rating: </label>
-      <input name="rating" type="range" min="0" max="10" ref={register} />
+      <label htmlFor="rating">Rating: {rangeValue}</label>
+      <input
+        name="rating"
+        type="range"
+        min="0"
+        value={rangeValue}
+        max="10"
+        onChange={(e) => {
+          setRangeValue(e.target.value);
+        }}
+        ref={register}
+      />
       <button disabled={loading} type="submit">
         {loading ? "Creating..." : "Create Travel Log"}
       </button>

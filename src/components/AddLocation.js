@@ -18,8 +18,8 @@ const AddLocation = (props) => {
             <svg
               className="marker"
               style={{
-                height: `${6 * viewport.zoom}`,
-                width: `${6 * viewport.zoom}`,
+                height: `${4 * viewport.zoom}`,
+                width: `${4 * viewport.zoom}`,
               }}
               viewBox="0 0 24 24"
               stroke-width="2"
