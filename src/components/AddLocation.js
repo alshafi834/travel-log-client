@@ -4,21 +4,22 @@ import { Marker, Popup } from "react-map-gl";
 import LogEntryForm from "./LogEntryForm";
 
 const AddLocation = (props) => {
+  const { addLocation, viewport, setAddLocation, getTravelEntries } = props;
   return (
     <div>
-      {props.addLocation ? (
+      {addLocation ? (
         <>
           <Marker
-            latitude={props.addLocation.latitude}
-            longitude={props.addLocation.longitude}
+            latitude={addLocation.latitude}
+            longitude={addLocation.longitude}
             offsetLeft={-20}
             offsetTop={-10}
           >
             <svg
               className="marker"
               style={{
-                height: `${6 * props.viewport.zoom}`,
-                width: `${6 * props.viewport.zoom}`,
+                height: `${6 * viewport.zoom}`,
+                width: `${6 * viewport.zoom}`,
               }}
               viewBox="0 0 24 24"
               stroke-width="2"
@@ -31,22 +32,22 @@ const AddLocation = (props) => {
             </svg>
           </Marker>
           <Popup
-            latitude={props.addLocation.latitude}
-            longitude={props.addLocation.longitude}
+            latitude={addLocation.latitude}
+            longitude={addLocation.longitude}
             closeButton={true}
             closeOnClick={false}
             dynamicPosition={true}
             onClose={() => {
-              props.setAddLocation(null);
+              setAddLocation(null);
             }}
             anchor="top"
           >
             <div className="popup">
               <LogEntryForm
-                coordinates={props.addLocation}
+                coordinates={addLocation}
                 onFormClose={() => {
-                  props.setAddLocation(null);
-                  props.getTravelEntries();
+                  setAddLocation(null);
+                  getTravelEntries();
                 }}
               />
             </div>
