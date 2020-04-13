@@ -49,8 +49,6 @@
 
 .credit {
   position: fixed;
-  top: 50 px;
-  position: fixed;
   bottom: 0;
   right: 0;
   padding: 0 55px;
@@ -62,6 +60,18 @@
 
 .credit p {
   margin: 5px;
+}
+
+.instruction {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c8c9c9;
+  color: #1cbea0;
+  background: #fff;
+  z-index: 9999;
 }
 
 /* rance input style */

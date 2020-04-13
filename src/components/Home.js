@@ -4,6 +4,7 @@ import { listLogEntries } from "../API";
 import MapMarker from "./MapMarker";
 import AddLocation from "./AddLocation";
 import Credit from "./Credit";
+import Instruction from "./Instruction";
 
 const Home = () => {
   const [logEntries, setLogEntries] = useState([]);
@@ -13,9 +14,9 @@ const Home = () => {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
-    latitude: 37.6,
-    longitude: -95.665,
-    zoom: 4,
+    latitude: 23.7805733,
+    longitude: 90.279239,
+    zoom: 6.5,
   });
 
   const getTravelEntries = async () => {
@@ -49,6 +50,8 @@ const Home = () => {
         showPopUp={showPopUp}
         setShowPopUp={setShowPopUp}
       />
+
+      <Instruction />
 
       <AddLocation
         addLocation={addLocation}
