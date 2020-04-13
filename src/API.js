@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:1337";
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 export async function listLogEntries() {
   const response = await fetch(`${API_URL}/api/logs`);
