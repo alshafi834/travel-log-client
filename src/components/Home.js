@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ReactMapGL from "react-map-gl";
 import { listLogEntries } from "../API";
 import MapMarker from "./MapMarker";
 import AddLocation from "./AddLocation";
 import Credit from "./Credit";
 import Instruction from "./Instruction";
+import Search from "./Search";
 
 const Home = () => {
   const [logEntries, setLogEntries] = useState([]);
@@ -36,6 +37,10 @@ const Home = () => {
     });
   };
 
+  /* const setCoordinate = useCallback((event) => {
+    console.log(event);
+  }, []); */
+
   return (
     <ReactMapGL
       {...viewport}
@@ -52,6 +57,8 @@ const Home = () => {
       />
 
       <Instruction />
+
+      <Search setViewport={setViewport} />
 
       <AddLocation
         addLocation={addLocation}

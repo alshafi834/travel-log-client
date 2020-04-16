@@ -33,3 +33,11 @@ export async function uploadImage(file) {
   console.log(response);
   return response.data;
 }
+
+export async function searchPlace(placeName) {
+  console.log(placeName);
+  const searchAPI_URL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${placeName}.json?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`;
+
+  const response = await axios.get(searchAPI_URL);
+  return response.data.features;
+}

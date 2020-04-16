@@ -14,6 +14,7 @@ const Instruction = () => {
       {openInstruction ? (
         <div className="infos">
           <ul>
+            <li>Search your country/region/place</li>
             <li>Double click on map to add a travel log</li>
             <li>Click on the map pins to watch log infos.</li>
           </ul>

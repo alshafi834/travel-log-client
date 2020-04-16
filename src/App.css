@@ -54,9 +54,49 @@
   right: 0;
   padding: 0 55px;
   border-radius: 5px;
-  border: 3px solid #1cbea0;
-  background: #1cbea0;
+  background: #0000008f;
   z-index: 9999;
+  color: white;
+}
+
+.searchLocation {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 0;
+}
+.searchLocation input {
+  background: #fff;
+  height: 25px;
+  padding: 5px 8px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  border-radius: 4px 0 0 4px;
+}
+.searchLocation button {
+  padding: 9px 15px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #dddddd;
+  background: #dddddd;
+  cursor: pointer;
+}
+.searchtool {
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 4px;
+}
+.searchLocation ul {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.searchLocation ul li {
+  list-style: none;
+  padding: 8px 8px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.searchLocation ul li:hover {
+  background-color: #f3f3f3;
 }
 
 .credit p {
@@ -69,8 +109,8 @@
   left: 0;
   padding: 10px;
   border-radius: 5px;
-  border: 2px solid #c8c9c9;
-  color: #1cbea0;
+  border: 1px solid #c8c9c9;
+  color: #494949;
   background: #fff;
   z-index: 9999;
   display: flex;
